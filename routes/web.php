@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\UpazilaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,12 @@ Route::post('/division/{division}/destroy', [DivisionController::class, 'destroy
 Route::get('/district-index', [DistrictController::class, 'index'])->name('district.index');
 Route::post('/district-store', [DistrictController::class, 'store'])->name('district.store');
 Route::post('/district/{district}/destroy', [DistrictController::class, 'destroy'])->name('district.destroy');
+
+
+
+// Upazila
+
+Route::get('/upazila-index', [UpazilaController::class, 'index'])->name('upazila.index');
+Route::post('/upazila-store', [UpazilaController::class, 'store'])->name('upazila.store');
+Route::post('/upazila/{district}/destroy', [UpazilaController::class, 'destroy'])->name('upazila.destroy');
 

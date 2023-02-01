@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Upazila extends Model
 {
     use HasFactory;
+    protected $table = 'upazilas';
+    protected $fillable = [ 'name' ];
 }

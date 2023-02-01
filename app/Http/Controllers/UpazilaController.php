@@ -14,7 +14,8 @@ class UpazilaController extends Controller
      */
     public function index()
     {
-        //
+        $upazilas = Upazila::orderBy('name')->get();
+        return view('upazila.index',compact('upazilas'));
     }
 
     /**
@@ -35,7 +36,10 @@ class UpazilaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $upazila = new Upazila();
+        $upazila->name = $request->upazila_name;
+        $upazila->save();
+        return back();
     }
 
     /**
